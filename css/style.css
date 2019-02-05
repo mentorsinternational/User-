@@ -185,6 +185,9 @@ section .title {
 .topnav .nav-icon {
   margin-left: 15px;
 }
+.topnav .nav-icon i {
+  transition: 0.5s;
+}
 .topnav .nav-links {
   display: flex;
   flex-direction: column;
@@ -199,10 +202,14 @@ section .title {
 }
 .topnav .nav-links a {
   padding: 10px 5px;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid floralwhite;
+  transition: 0.2s;
 }
 .topnav .nav-links a:last-child {
   border-bottom: none;
+}
+.topnav .nav-links a:hover {
+  color: red;
 }
 .topnav .slide {
   left: 5px;
@@ -348,9 +355,11 @@ section .title {
   margin: 5px 0 20px;
   background-color: purple;
   border: 1px solid yellow;
+  border-radius: 10px;
 }
 .testimonials .tabs > div {
   padding: 10px;
+  border-radius: 10px;
   flex: auto;
   text-align: center;
 }
@@ -361,20 +370,23 @@ section .title {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .testimonials .items > div {
   display: none;
   background: rgba(109, 88, 131, 0.9);
   border: 1px solid greenyellow;
+  border-radius: 10px;
   padding: 10px;
   line-height: 1.25;
+  min-height: 130px;
+}
+.testimonials .items > div .location {
+  text-align: center;
+  margin-bottom: 10px;
 }
 .testimonials .items .selected {
   display: block;
-}
-.testimonials .items .location {
-  text-align: center;
-  margin-bottom: 10px;
 }
 footer {
   padding: 25px;
