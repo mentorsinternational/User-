@@ -1,0 +1,53 @@
+.testimonials {
+  background-image: url('../../assets/blossom.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100% !important;
+
+  > * {
+    max-width: 700px;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0 20px;
+    background-color: purple;
+    border: 1px solid yellow;
+
+    > div {
+      padding: 10px;
+      flex: auto;
+      text-align: center;
+    }
+
+    .selected {
+      background-color: lighten(purple, 10%);
+    }
+  }
+
+  .items {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    > div {
+      display: none;
+      background: rgba(109, 88, 131, 0.9);
+      border: 1px solid greenyellow;
+      padding: 10px;
+      line-height: 1.25;
+    }
+
+    .selected {
+      display: block;
+    }
+
+    .location {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}

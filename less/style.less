@@ -20,17 +20,32 @@ body {
 .container {
   width: 100%;
   max-height: 100vh;
+}
 
-  section {
-    padding: 15px 0;
-    border-bottom: 3px solid lighten(@main-bg-color, 10%);
+main {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
 
-    .title {
-      font-family: cursive;
-      text-align: center;
-      font-size: 2.3rem;
-      margin-bottom: 15px;
+section {
+  padding: 15px 10px;
+  border-bottom: 3px solid lighten(@main-bg-color, 10%);
+  width: 100%;
+
+  @media @desktop {
+    width: 50%;
+
+    &:nth-child(odd) {
+      border-right: 3px solid lighten(@main-bg-color, 10%);
     }
+  }
+
+  .title {
+    font-family: cursive;
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 15px;
   }
 }
 
@@ -40,3 +55,4 @@ body {
 @import '../components/info/info.less';
 @import '../components/difference/difference.less';
 @import '../components/testimonials/testimonials.less';
+@import '../components/footer/footer.less';

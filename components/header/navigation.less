@@ -8,7 +8,29 @@
   }
 
   .nav-links {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    position: absolute;
+    left: -150px;
+    transition: 0.5s;
+
+    a {
+      padding: 10px 5px;
+      border-bottom: 1px solid;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .slide {
+    left: 5px;
   }
 
   a {
