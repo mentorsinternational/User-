@@ -282,13 +282,6 @@ body {
 .info .content .orangeish {
   color: #ec6a56;
 }
-.carousel {
-  width: 100%;
-  height: 300px;
-}
-.carousel .testimonial {
-  visibility: hidden;
-}
 .difference {
   background-image: url("https://mentorsinternational.org/wp-content/uploads/2014/04/our-story-bg.jpg");
   background-size: cover;
