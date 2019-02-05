@@ -1,0 +1,64 @@
+.cta {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-variant: small-caps;
+  text-shadow: 1px 1px 1px rgb(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  padding: 0 25px;
+
+  > * {
+    width: fit-content;
+    margin: 8px 0;
+  }
+
+  h2 {
+    font-size: 3rem;
+    text-shadow: 1px 1px 1px orangered;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 5px 0;
+
+    @media @tablet {
+      font-size: 4rem;
+    }
+
+    @media @desktop {
+      font-size: 5rem;
+    }
+  }
+
+  p, button {
+    text-shadow: 1px 1px 1px rgba(0,255,0,0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.8rem;
+
+    @media @tablet {
+      font-size: 2rem;
+    }
+
+    @media @desktop {
+      font-size: 2.5rem;
+    }
+  }
+
+  button {
+    color: @main-fg-color;
+    padding: 5px 30px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 4px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+    font-variant: small-caps;
+    font-weight: bold;
+    margin-top: 10px;
+    outline: none;
+    background: linear-gradient(to bottom, rgba(130,200,160,1) 0%, rgba(124, 185, 149, 1) 100%);
+    cursor: pointer;
+  }
+}

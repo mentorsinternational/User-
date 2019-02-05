@@ -1,0 +1,302 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #262626;
+  color: floralwhite;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+.container {
+  width: 100%;
+  max-height: 100vh;
+}
+.container section {
+  padding: 15px 0;
+  border-bottom: 3px solid #404040;
+}
+.container section .title {
+  font-family: cursive;
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+}
+.main-header {
+  font-weight: bold;
+  position: relative;
+}
+.main-header > * {
+  width: 100%;
+}
+.main-header > img {
+  filter: blur(1px);
+  border-radius: 5px;
+}
+.topnav {
+  position: absolute;
+  top: 15px;
+  z-index: 2;
+}
+.topnav .nav-icon {
+  margin-left: 15px;
+}
+.topnav .nav-links {
+  display: none;
+}
+.topnav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.7rem;
+}
+.topnav img {
+  margin: 0 auto;
+}
+.cta {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-variant: small-caps;
+  text-shadow: 1px 1px 1px #000000;
+  position: absolute;
+  top: 0;
+  padding: 0 25px;
+}
+.cta > * {
+  width: fit-content;
+  margin: 8px 0;
+}
+.cta h2 {
+  font-size: 3rem;
+  text-shadow: 1px 1px 1px orangered;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 5px 0;
+}
+@media (min-width: 500px) {
+  .cta h2 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 800px) {
+  .cta h2 {
+    font-size: 5rem;
+  }
+}
+.cta p,
+.cta button {
+  text-shadow: 1px 1px 1px rgba(0, 255, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1.8rem;
+}
+@media (min-width: 500px) {
+  .cta p,
+  .cta button {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 800px) {
+  .cta p,
+  .cta button {
+    font-size: 2.5rem;
+  }
+}
+.cta button {
+  color: floralwhite;
+  padding: 5px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  font-variant: small-caps;
+  font-weight: bold;
+  margin-top: 10px;
+  outline: none;
+  background: linear-gradient(to bottom, #82c8a0 0%, #7cb995 100%);
+  cursor: pointer;
+}
+.info {
+  background-image: url('../../assets/autumn-leaves.jpg');
+  background-size: cover;
+}
+.info .content {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  line-height: 1.25;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+.info .content p {
+  width: 46%;
+  background-color: rgba(86, 77, 73, 0.8);
+  border-radius: 10px;
+  margin: 2%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.info .content .blueish {
+  color: #1f9ad7;
+}
+.info .content .greenish {
+  color: #9ebb31;
+}
+.info .content .orangeish {
+  color: #ec6a56;
+}
+.carousel {
+  width: 100%;
+  height: 300px;
+}
+.carousel .testimonial {
+  visibility: hidden;
+}
+.difference {
+  background-image: url("https://mentorsinternational.org/wp-content/uploads/2014/04/our-story-bg.jpg");
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.difference .content {
+  padding: 0 10%;
+}
