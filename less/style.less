@@ -1,0 +1,58 @@
+@import 'variables';
+@import 'mixins';
+@import 'reset';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: @main-bg-color;
+  color: @main-fg-color;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  width: 100%;
+  max-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
+
+section {
+  padding: 15px 10px;
+  border-bottom: 3px solid lighten(@main-bg-color, 10%);
+  width: 100%;
+
+  @media @desktop {
+    width: 50%;
+
+    &:nth-child(odd) {
+      border-right: 3px solid lighten(@main-bg-color, 10%);
+    }
+  }
+
+  .title {
+    font-family: cursive;
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+  }
+}
+
+@import '../components/header/header.less';
+@import '../components/header/navigation.less';
+@import '../components/header/cta.less';
+@import '../components/info/info.less';
+@import '../components/difference/difference.less';
+@import '../components/testimonials/testimonials.less';
+@import '../components/footer/footer.less';

@@ -1,0 +1,54 @@
+.topnav {
+  position: absolute;
+  top: 15px;
+  z-index: 2;
+
+  .nav-icon {
+    margin-left: 15px;
+    i {
+      transition: 0.5s;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    position: absolute;
+    left: -150px;
+    transition: 0.5s;
+
+    a {
+      padding: 10px 5px;
+      border-bottom: 1px solid @main-fg-color;
+      transition: 0.2s;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  .slide {
+    left: 5px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.7rem;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+
+}
