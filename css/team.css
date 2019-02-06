@@ -1,10 +1,19 @@
 body {
-  background-color: black;
+  background-color: rgb(5,5,5);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
+}
+
+body > a {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: grey;
 }
 
 .members {
