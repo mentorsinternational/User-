@@ -1,0 +1,32 @@
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.member {
+  width: 50%;
+}
+
+.member > img {
+  border-radius: 10px;
+}
+
+.wrap {
+  text-align: center;
+}
+
+@media (min-width: 800px) {
+  .member {
+    width: 33%;
+  }
+}
