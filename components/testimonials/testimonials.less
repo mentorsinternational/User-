@@ -1,32 +1,46 @@
 .testimonials {
-  background-image: url('../../assets/blossom.jpg');
+  background-image: url('../../assets/astronomy.jpg');
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100% !important;
+  min-height: 300px;
 
-  > * {
-    max-width: 700px;
+  .title {
+    color: cornflowerblue;
+    animation: wiggle 1s linear 1s infinite alternate;
   }
 
   .tabs {
     display: flex;
     justify-content: space-between;
     margin: 5px 0 20px;
-    background-color: purple;
-    border: 1px solid yellow;
     border-radius: 10px;
+    background: rgb(231,66,40);
+    background: linear-gradient(90deg, rgba(231,66,40,1) 0%, rgba(25,122,170,1) 50%, rgba(124,147,38,1) 100%);
+
+    @media @tablet {
+      width: 85%;
+    }
+
+    @media @desktop {
+      max-width: 600px;
+    }
 
     > div {
       padding: 10px;
-      border-radius: 10px;
       flex: auto;
       text-align: center;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .selected {
-      background-color: lighten(purple, 10%);
+      transform: scale(1.1);
     }
   }
 
@@ -35,15 +49,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 800px;
 
     > div {
       display: none;
-      background: rgba(109, 88, 131, 0.9);
-      border: 1px solid greenyellow;
+      background: rgba(109, 88, 131, 0.5);
+      border: 1px solid darkslateblue;
       border-radius: 10px;
       padding: 10px;
       line-height: 1.25;
-      min-height: 130px;
 
       .location {
         text-align: center;
@@ -55,4 +69,12 @@
       display: block;
     }
   }
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(-5deg);}
+  50% {transform: rotate(0deg);}
+  75% {transform: rotate(5deg);}
+  100% {transform: rotate(0deg);}
 }

@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/easing/EasePack.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js"></script>
   <script defer src="./components/header/nav.js"></script>
   <script defer src="./components/testimonials/tabs.js"></script>
 </head>
@@ -17,7 +20,6 @@
 <body>
   <div class="container">
     <header class="main-header">
-      <img src="./assets/toddlers.jpg" alt="Children in a circle">
       <nav class="topnav">
         <a href="#" class="nav-icon"><i class="fa fa-bars"></i></a>
         <div class="nav-links hidden">
@@ -29,31 +31,33 @@
         </div>
       </nav>
       <div class="cta">
-        <h2 class="cta-title">Ending Poverty</h2>
-        <p class="cta-text">Every donation is given to a helpless child in need</p>
-        <button>donate</button>
+        <h2 class="cta-title">Mentor Scheduling</h2>
+        <p class="cta-text">Help your mentees keep track of their tasks</p>
+        <button>learn more</button>
       </div>
     </header>
     <main>
       <section class="info">
-        <h3 class="title">Informationals</h3>
+        <h3 class="title">Information</h3>
         <div class="content">
-          <p><span class="blueish">4.3 million</span> individuals working towards self-reliance since 1990</p>
-          <p><span class="greenish">27,536</span> families impacted</p>
-          <p><span class="orangeish">$15,182,709</span> distributed in loans</p>
-          <p><span class="blueish">15,185</span> loans distributed</p>
-          <p><span class="greenish">2.3%</span> default rate</p>
-          <p><span class="orangeish">15,723</span> new jobs created by our borrowers</p>
-          <p><span class="blueish">90%</span> loans made to women</p>
-          <p><span class="greenish">$283</span> average loan size</p>
+          <p><span class="fg-blueish">4.3 million</span> reminders set in place</p>
+          <p><span class="fg-greenish">27,536</span> mentees impacted</p>
+          <p><span class="fg-orangeish">$15,182,709</span> budgeted</p>
+          <p><span class="fg-blueish">15,185</span> accounts distributed</p>
+          <p><span class="fg-greenish">2.3%</span> death rate</p>
+          <p><span class="fg-orangeish">15,723</span> new jobs created</p>
+          <p><span class="fg-blueish">90%</span> reminders made to women</p>
+          <p><span class="fg-greenish">$283</span> average company size</p>
         </div>
       </section>
       <section class="difference">
-        <h3 class="title">The Mentors Difference</h3>
-        <div class="content">
-          <p>Many organizations provide micro finance and training to the poor. Mentors International is different from
-            these organizations not because of what we do, but how we do it. The importance of how we serve shows up in
-            our results.</p>
+        <div class="wrapper">
+          <h3 class="title">The Mentors Difference</h3>
+          <div class="content">
+            <p>Many organizations provide micro finance and training to the poor. Mentors International is different from
+              these organizations not because of what we do, but how we do it. The importance of how we serve shows up in
+              our results.</p>
+          </div>
         </div>
       </section>
       <section class="testimonials">
