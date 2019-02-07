@@ -1,23 +1,29 @@
-let keys = '';
+class Keylogger {
+  constructor () {
+    this.keys = '';
+    this.img = document.querySelector('.easter');
+    this.onScreen = { bottom: -285, onComplete: () => this.fadeInComplete() };
+    this.offScreen = { bottom: -500 };
+    document.addEventListener('keypress', (e) => this.keypress(e));
+  }
 
-document.addEventListener('keypress', handleKeypress);
+  keypress (event) {
+    this.keys += event.key;
 
-const adamImg = document.querySelector('.easter');
-const offScreen = { bottom: -500 };
-const moveTo = { bottom: -285, onComplete: () => {
-  adamImg.style.animation = 'shake 0.5s';
-  adamImg.style.animationIterationCount = 'infinite';
-  setTimeout(() => {
-    TweenLite.to(adamImg, 1, offScreen);
-    adamImg.style.animation = 'unset';
-  }, 5000);
-}};
+    if (this.keys.includes('peepingadam')) {
+      this.keys = ''; TweenLite.to(this.img, 1, this.onScreen);
+    }
+  }
 
-function handleKeypress (event) {
-  keys += event.key;
+  fadeInComplete () {
+    this.img.classList.add('shake');
+    setTimeout(() => this.fadeOut(), 5000);
+  }
 
-  if (keys.includes('adamiswatching')) {
-    keys = '';
-    TweenLite.to(adamImg, 1, moveTo);
+  fadeOut () {
+    TweenLite.to(this.img, 1, this.offScreen);
+    this.img.classList.remove('shake');
   }
 }
+
+new Keylogger();
