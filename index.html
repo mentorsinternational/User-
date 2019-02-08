@@ -5,19 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mentors International</title>
+  <title>Mentors International - Scheduley</title>
   <link rel="shortcut icon" href="https://mentorsinternational.org/wp-content/uploads/2014/11/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/easing/EasePack.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenLite.min.js"></script>
   <script defer src="./components/header/nav.js"></script>
+  <script defer src="./components/header/cta.js"></script>
   <script defer src="./components/testimonials/tabs.js"></script>
+  <script defer src="./components/easter/easter.js"></script>
 </head>
 
 <body>
   <div class="container">
+    <img src="./assets/adam.png" class="easter" alt="creepy thumbs up">
     <header class="main-header">
-      <img src="./assets/toddlers.jpg" alt="Children in a circle">
       <nav class="topnav">
         <a href="#" class="nav-icon"><i class="fa fa-bars"></i></a>
         <div class="nav-links hidden">
@@ -29,31 +34,33 @@
         </div>
       </nav>
       <div class="cta">
-        <h2 class="cta-title">Ending Poverty</h2>
-        <p class="cta-text">Every donation is given to a helpless child in need</p>
-        <button>donate</button>
+        <h2 class="cta-title">Mentor Scheduling</h2>
+        <p class="cta-text">Help your mentees keep track of their tasks</p>
+        <button>learn more</button>
       </div>
     </header>
     <main>
       <section class="info">
-        <h3 class="title">Informationals</h3>
+        <h3 class="title">Information</h3>
         <div class="content">
-          <p><span class="blueish">4.3 million</span> individuals working towards self-reliance since 1990</p>
-          <p><span class="greenish">27,536</span> families impacted</p>
-          <p><span class="orangeish">$15,182,709</span> distributed in loans</p>
-          <p><span class="blueish">15,185</span> loans distributed</p>
-          <p><span class="greenish">2.3%</span> default rate</p>
-          <p><span class="orangeish">15,723</span> new jobs created by our borrowers</p>
-          <p><span class="blueish">90%</span> loans made to women</p>
-          <p><span class="greenish">$283</span> average loan size</p>
+          <p><span class="fg-blueish">4.3 million</span> reminders set in place</p>
+          <p><span class="fg-greenish">27,536</span> mentees impacted</p>
+          <p><span class="fg-orangeish">$15,182,709</span> budgeted</p>
+          <p><span class="fg-blueish">15,185</span> accounts distributed</p>
+          <p><span class="fg-greenish">2.3%</span> death rate</p>
+          <p><span class="fg-orangeish">15,723</span> new jobs created</p>
+          <p><span class="fg-blueish">90%</span> reminders made to women</p>
+          <p><span class="fg-greenish">$283</span> average saved per week</p>
         </div>
       </section>
       <section class="difference">
-        <h3 class="title">The Mentors Difference</h3>
-        <div class="content">
-          <p>Many organizations provide micro finance and training to the poor. Mentors International is different from
-            these organizations not because of what we do, but how we do it. The importance of how we serve shows up in
-            our results.</p>
+        <div class="wrapper">
+          <h3 class="title">The Mentors Difference</h3>
+          <div class="content">
+            <p>Many organizations provide micro finance and training to the poor. Mentors International is different from
+              these organizations not because of what we do, but how we do it. The importance of how we serve shows up in
+              our results.</p>
+          </div>
         </div>
       </section>
       <section class="testimonials">
@@ -66,29 +73,35 @@
         <div class="items">
           <div>
             <div class="location">Lima, Peru</div>
-            <div class="feedback">Mentors Peru has been a great help to me. I have been able to move my family and my business forward. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta hic iste qui maxime id vel provident excepturi libero soluta, incidunt quisquam dignissimos quas nisi quae repudiandae itaque temporibus ratione nulla.</div>
+            <div class="feedback">Instant, simple communication. I love that I don't have to write a whole email or call mentors for simple things! I love to get the reminders from mentors and other mentees as well. I feel connected. Especially connected to my mentor who gives me the reminders I need to make it through the day.</div>
           </div>
           <div>
             <div class="location">Somewhere, Peru</div>
-            <div class="feedback">It is never too late to be able to learn to live better. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit enim ratione cumque, hic, harum quisquam tenetur, quaerat fuga sapiente dolorem tempore quas maiores id magnam? Magni tempore praesentium officia blanditiis.</div>
+            <div class="feedback">Love it. It's seriously the best app I've ever used. The way the developers respond to concerns is really sweet and nice. And it's free - this is its biggest advantage! If it remained free like this then I'm sure it will soon become most used app ever...</div>
           </div>
           <div>
             <div class="location">Chiquimula, Guatemala</div>
-            <div class="feedback">My mother was one of the best cooks in our village. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, suscipit enim corporis placeat nisi qui perspiciatis reiciendis earum, ut consequatur vitae praesentium voluptate ab dolor iure, corrupti optio odit impedit!</div>
+            <div class="feedback">Extremely easy app to use! And very convenient when needed to remind myself what I need to do for the day. I definitely recommend this app to anyone who tends to forget and needs to be reminded at a certain time or day. I have been using this app for about a year. Worth it!</div>
           </div>
         </div>
       </section>
     </main>
     <footer>
-      <div class="contact">
-        <h3>Contact</h3>
-        <address>
-          <i class="fa fa-phone"></i> 801-676-7776 (Fax: 801-676-7775)<br>
-          <i class="fa fa-envelope"></i> info@mentorsinternational.org<br>
-          <i class="fa fa-home"></i> 65 East Wadsworth Park Dr. Suite 207 Draper, Utah 84020
-        </address>
-      </div>
-    </footer>
+      <div class="wrapper">
+        <div class="contact">
+          <h3>Contact</h3>
+          <address>
+            <i class="fa fa-phone"></i> 801-676-7776 (Fax: 801-676-7775)<br>
+            <i class="fa fa-envelope"></i> info@mentorsinternational.org<br>
+            <i class="fa fa-home"></i> 65 East Wadsworth Park Dr. Suite 207 Draper, Utah 84020
+          </address>
+        </div>
+        <div class="links">
+          <h3>Links</h3>
+          <a href="team.html">Meet The Team</a>
+        </div>
+      </footer>
+    </div>
   </div>
 </body>
 

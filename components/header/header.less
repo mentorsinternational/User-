@@ -1,6 +1,11 @@
 .main-header {
+  background-image: url('../../assets/depressing.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  height: 50vh;
   font-weight: bold;
   position: relative;
+  border-bottom: 3px solid lighten(@main-bg-color, 10%);
 
   > * {
     width: 100%;
@@ -9,5 +14,6 @@
   > img {
     filter: blur(1px);
     border-radius: 5px;
+    max-height: 100vh;
   }
 }

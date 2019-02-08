@@ -50,11 +50,11 @@ class Item {
   }
 
   select () {
-    this.element.classList.add('selected');
+    TweenLite.to(this.element, 0.3, {delay: 0.3, opacity: 1, display: 'block'});
   }
 
   deselect () {
-    this.element.classList.remove('selected');
+    TweenLite.to(this.element, 0.3, {opacity: 0, display: 'none'});
   }
 }
 

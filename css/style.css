@@ -166,9 +166,32 @@ section .title {
   font-size: 2.3rem;
   margin-bottom: 15px;
 }
+.fg-blueish {
+  color: #1f9ad7;
+}
+.fg-greenish {
+  color: #9ebb31;
+}
+.fg-orangeish {
+  color: #ec6a56;
+}
+.bg-blueish {
+  background-color: #197aaa;
+}
+.bg-greenish {
+  background-color: #7c9326;
+}
+.bg-orangeish {
+  background-color: #e74228;
+}
 .main-header {
+  background-image: url('../../assets/depressing.jpg');
+  background-size: cover;
+  background-position: center 35%;
+  height: 50vh;
   font-weight: bold;
   position: relative;
+  border-bottom: 3px solid #404040;
 }
 .main-header > * {
   width: 100%;
@@ -176,6 +199,7 @@ section .title {
 .main-header > img {
   filter: blur(1px);
   border-radius: 5px;
+  max-height: 100vh;
 }
 .topnav {
   position: absolute;
@@ -219,9 +243,6 @@ section .title {
   text-decoration: none;
   font-size: 1.7rem;
 }
-.topnav img {
-  margin: 0 auto;
-}
 .cta {
   height: 100%;
   display: flex;
@@ -240,10 +261,11 @@ section .title {
   margin: 8px 0;
 }
 .cta h2 {
+  color: darkcyan;
   font-size: 3rem;
-  text-shadow: 1px 1px 1px orangered;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  text-shadow: 1px 1px 1px midnightblue;
+  border-top: 1px solid royalblue;
+  border-bottom: 1px solid royalblue;
   padding: 5px 0;
 }
 @media (min-width: 500px) {
@@ -258,7 +280,8 @@ section .title {
 }
 .cta p,
 .cta button {
-  text-shadow: 1px 1px 1px rgba(0, 255, 0, 0.5);
+  color: lightblue;
+  text-shadow: 1px 1px 1px rgba(0, 200, 100, 0.5);
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 1.8rem;
@@ -286,12 +309,16 @@ section .title {
   font-weight: bold;
   margin-top: 10px;
   outline: none;
-  background: linear-gradient(to bottom, #82c8a0 0%, #7cb995 100%);
+  background: linear-gradient(to bottom, rgba(130, 160, 200, 0.8) 0%, rgba(124, 149, 185, 0.8) 100%);
   cursor: pointer;
 }
 .info {
-  background-image: url('../../assets/autumn-leaves.jpg');
+  background-image: url('../../assets/clouds.jpg');
   background-size: cover;
+}
+.info .title {
+  color: darkgrey;
+  transform: rotate(2deg);
 }
 .info .content {
   display: flex;
@@ -303,7 +330,7 @@ section .title {
 }
 .info .content p {
   width: 46%;
-  background-color: rgba(86, 77, 73, 0.8);
+  background-color: #25242099;
   border-radius: 10px;
   margin: 2%;
   padding: 1%;
@@ -313,17 +340,8 @@ section .title {
   justify-content: center;
   text-align: center;
 }
-.info .content .blueish {
-  color: #1f9ad7;
-}
-.info .content .greenish {
-  color: #9ebb31;
-}
-.info .content .orangeish {
-  color: #ec6a56;
-}
 .difference {
-  background-image: url("https://mentorsinternational.org/wp-content/uploads/2014/04/our-story-bg.jpg");
+  background-image: url('../../assets/underwater.jpg');
   background-size: cover;
   height: 300px;
   display: flex;
@@ -335,51 +353,79 @@ section .title {
     height: unset;
   }
 }
-.difference .content {
+.difference .wrapper {
   padding: 0 10%;
 }
+.difference .wrapper .title {
+  color: aquamarine;
+  transform: rotate(-2deg);
+  margin-bottom: 20px;
+}
+.difference .wrapper .content {
+  background-color: rgba(14, 26, 23, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+}
 .testimonials {
-  background-image: url('../../assets/blossom.jpg');
+  background-image: url('../../assets/astronomy.jpg');
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100% !important;
+  min-height: 300px;
 }
-.testimonials > * {
-  max-width: 700px;
+.testimonials .title {
+  color: cornflowerblue;
+  animation: wiggle 0.25s linear 1s infinite running;
+  margin-bottom: 25px;
 }
 .testimonials .tabs {
   display: flex;
   justify-content: space-between;
   margin: 5px 0 20px;
-  background-color: purple;
-  border: 1px solid yellow;
   border-radius: 10px;
+  background: #e74228;
+  background: linear-gradient(90deg, #e74228 0%, #197aaa 50%, #7c9326 100%);
+}
+@media (min-width: 500px) {
+  .testimonials .tabs {
+    width: 85%;
+  }
+}
+@media (min-width: 800px) {
+  .testimonials .tabs {
+    max-width: 600px;
+  }
 }
 .testimonials .tabs > div {
   padding: 10px;
-  border-radius: 10px;
   flex: auto;
   text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .testimonials .tabs .selected {
-  background-color: #b300b3;
+  transform: scale(1.1);
 }
 .testimonials .items {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 800px;
 }
 .testimonials .items > div {
   display: none;
-  background: rgba(109, 88, 131, 0.9);
-  border: 1px solid greenyellow;
+  opacity: 0;
+  background: rgba(109, 88, 131, 0.5);
+  border: 1px solid darkslateblue;
   border-radius: 10px;
   padding: 10px;
   line-height: 1.25;
-  min-height: 130px;
 }
 .testimonials .items > div .location {
   text-align: center;
@@ -387,16 +433,87 @@ section .title {
 }
 .testimonials .items .selected {
   display: block;
+  opacity: 1;
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 footer {
+  background-image: url('../../assets/abstract-curves.jpg');
   padding: 25px;
   display: flex;
   justify-content: center;
 }
-footer .contact h3 {
+footer h3 {
   margin-bottom: 15px;
   font-weight: bold;
 }
+footer .contact {
+  margin-bottom: 25px;
+}
 footer .contact address {
   line-height: 1.5;
+}
+footer .links > a {
+  text-decoration: none;
+  color: yellow;
+}
+.easter {
+  position: fixed;
+  right: -65px;
+  bottom: -500px;
+  z-index: 1;
+}
+.shake {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
