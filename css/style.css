@@ -330,7 +330,7 @@ section .title {
 }
 .info .content p {
   width: 46%;
-  background-color: rgba(10, 10, 10, 0.7);
+  background-color: #25242099;
   border-radius: 10px;
   margin: 2%;
   padding: 1%;
